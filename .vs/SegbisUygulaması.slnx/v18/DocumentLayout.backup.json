@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|c:\\users\\administrator\\source\\repos\\istatistik-app\\segbisuygulamas\u0131\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|solutionrelative:segbisuygulamas\u0131\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\segbisuygulamas\u0131\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|solutionrelative:segbisuygulamas\u0131\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\segbisuygulamas\u0131\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5CBF87A-895B-447F-9A3A-E43EF8A95C21}|SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj|solutionrelative:segbisuygulamas\u0131\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SegbisUygulamas\u0131||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\Form1.cs",
+              "RelativeDocumentMoniker": "SegbisUygulamas\u0131\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\Form1.cs",
+              "RelativeToolTip": "SegbisUygulamas\u0131\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T12:17:01.22Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SegbisUygulamas\u0131",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj",
+              "RelativeDocumentMoniker": "SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj",
+              "RelativeToolTip": "SegbisUygulamas\u0131\\SegbisUygulamas\u0131.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-05T12:36:20.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "SegbisUygulamas\u0131\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\Form1.Designer.cs",
+              "RelativeToolTip": "SegbisUygulamas\u0131\\Form1.Designer.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowEIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T06:35:37.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Istatistik-App\\SegbisUygulamas\u0131\\Form1.cs",
+              "RelativeDocumentMoniker": "SegbisUygulamas\u0131\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\SegbisUygulamas\u0131\\SegbisUygulamas\u0131\\Form1.cs [Tasar\u0131m]",
+              "RelativeToolTip": "..\\SegbisUygulamas\u0131\\SegbisUygulamas\u0131\\Form1.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T06:33:16.308Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

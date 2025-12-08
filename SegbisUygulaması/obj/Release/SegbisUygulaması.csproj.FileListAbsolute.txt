@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\bin\Release\SegbisUygulaması.exe.config
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\bin\Release\SegbisUygulaması.exe
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\bin\Release\SegbisUygulaması.pdb
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.Form1.resources
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.Properties.Resources.resources
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.exe
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.pdb
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\bin\Release\SegbisUygulaması.exe.manifest
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\bin\Release\SegbisUygulaması.application
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.exe.manifest
+C:\Users\Administrator\source\repos\SegbisUygulaması\SegbisUygulaması\obj\Release\SegbisUygulaması.application
