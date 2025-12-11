@@ -22,13 +22,15 @@ namespace SegbisUygulaması
     public partial class Form1 : Form
     {
         private readonly string cucmHost = "10.201.66.20";
-        private readonly string username = "apialpay";
-        private readonly string password = "Adalet09";
+        private readonly string username = "";
+        private readonly string password = "";
+        public int cikAdet = 0;
         BackgroundWorker bgWorker = new BackgroundWorker();
 
-        public Form1()
+        public Form1(string UserName, string Password)
         {
-
+            username = UserName;
+            password = Password;
             this.MinimumSize = new Size(800, 600);
             InitializeComponent();
             ServicePointManager.ServerCertificateValidationCallback +=
@@ -38,6 +40,79 @@ namespace SegbisUygulaması
             //bgWorker.DoWork += BgWorker_DoWork;
             //bgWorker.ProgressChanged += BgWorker_ProgressChanged;
             //bgWorker.RunWorkerCompleted += BgWorker_RunWorkerCompleted;
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private async Task<string> PostSoapRequestCikSayisi()
+        {
+            string soapXml = @"<?xml version=""1.0"" encoding=""UTF-8""?>
+<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:ns=""http://www.cisco.com/AXL/API/14.0"">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:executeSQLQuery>
+            <sql>
+                SELECT 
+                    de.name AS device_name,
+                    de.ndescription AS device_description,
+                    nu.dnorpattern AS internal_number,
+                    SUBSTR(nu.dnorpattern, 2, 4) AS unit_code,
+                    SUBSTR(nu.dnorpattern, 2, 2) AS city_code,
+                    t.tkmodel AS model_id,
+                    t.name AS model_name
+                FROM device de
+                INNER JOIN devicenumplanmap dvm ON de.pkid = dvm.fkdevice
+                INNER JOIN numplan nu ON nu.pkid = dvm.fknumplan
+                INNER JOIN typeproduct t ON de.tkmodel = t.tkmodel
+                WHERE SUBSTR(nu.dnorpattern, 4, 1) IN ('5','6','7','8')
+                AND SUBSTR(nu.dnorpattern, -1, 1) &lt;&gt; '0';
+            </sql>
+        </ns:executeSQLQuery>
+    </soapenv:Body>
+</soapenv:Envelope>";
+            string url = $"https://{cucmHost}:8443/axl/";
+
+            var handler = new HttpClientHandler
+            {
+                Credentials = new NetworkCredential(username, password)
+            };
+
+            using (var client = new HttpClient(handler))
+            {
+                client.Timeout = TimeSpan.FromSeconds(30);
+
+                var content = new StringContent(soapXml, Encoding.UTF8, "text/xml");
+                content.Headers.ContentType = new MediaTypeHeaderValue("text/xml");
+                content.Headers.Add("SOAPAction", "");
+
+                // SOAP isteğini gönder
+                var response = await client.PostAsync(url, content);
+
+                // Dönen XML string
+                var res = await response.Content.ReadAsStringAsync();
+
+                // XML'i parse et ve <row> sayısını bul
+                int rowCount = 0;
+                try
+                {
+                    XDocument doc = XDocument.Parse(res);
+                    rowCount = doc.Descendants().Count(x => x.Name.LocalName == "row");
+                    this.cikAdet = rowCount;
+                    this.cikLabel.Text = $"{cikLabel.Text} {rowCount.ToString()}";//$"{cikLabel.Text} {countCezaInfazKurumlari}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("XML parse hatası: " + ex.Message);
+                }
+
+
+
+                return res;
+            }
+
+
         }
         private void BgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -157,7 +232,6 @@ namespace SegbisUygulaması
             int countAGO = list.Count(x => x.Description != null && x.Description.Contains("AGO"));
             int countGT = list.Count(x => x.Description != null && x.Description.Contains("GT"));
             int countYuksekYargi = list.Count(x => x.Description != null && ((x.Description.Contains("Yargitay")) || (x.Description.Contains("Danistay")) || (x.Description.Contains("Anayasa"))));
-            int countCezaInfazKurumlari = list.Count(x => x.Description != null && x.Description.Contains(" CIK"));
             int countHSK = list.Count(x => x.Description != null && x.Description.Contains("HSK"));
 
 
@@ -171,8 +245,8 @@ namespace SegbisUygulaması
             this.gtLabel.Text = $"{gtLabel.Text} {countGT}";
             this.yuksekYargiLabel.Text = $"{yuksekYargiLabel.Text} {countYuksekYargi}";
             this.hskLabel.Text = $"{hskLabel.Text} {countHSK}";
-            this.cikLabel.Text = $"{cikLabel.Text} {countCezaInfazKurumlari}";
-            this.toplamLabel2.Text = $"{toplamLabel2.Text} {countCezaMah + countSavcilik + countBAM + countIdareMah + countAGO + countGT + countYuksekYargi + countHSK + countCezaInfazKurumlari}";
+            await PostSoapRequestCikSayisi();
+            this.toplamLabel2.Text = $"{toplamLabel2.Text} {countCezaMah + countSavcilik + countBAM + countIdareMah + countAGO + countGT + countYuksekYargi + countHSK + cikAdet}";
 
             progressBar1.Value = progressBar1.Maximum;
             labelLoading.Text = "Yüklendi ✓";

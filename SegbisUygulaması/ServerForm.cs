@@ -33,11 +33,18 @@ namespace SegbisUygulaması
         {
             EnteredUsername = txtUsername.Text;
             EnteredPassword = txtPassword.Text;
-            btnSave.Text = "Başarılı";
-            Form1 mainForm = new Form1();
-            mainForm.Show();
+            if (EnteredUsername == "" || EnteredPassword == "")
+            {
+                MessageBox.Show("Giriş Başarısız.");
+            }
+            else
+            {
+                btnSave.Text = "Kullanıcı Kayıt Edildi.";
+                Form1 mainForm = new Form1(EnteredUsername, EnteredPassword);
+                mainForm.Show();
 
-            this.Hide();
+                this.Hide();
+            }
         }
 
     }

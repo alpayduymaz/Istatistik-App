@@ -61,6 +61,8 @@ namespace SegbisUygulaması
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAllPhones)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+
             // 
             // dataGridAllPhones
             // 
